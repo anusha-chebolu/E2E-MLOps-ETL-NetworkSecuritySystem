@@ -1,0 +1,4 @@
+.env
+final_model
+__pycache__
+DS_Store
