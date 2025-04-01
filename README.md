@@ -22,9 +22,30 @@ A comprehensive end-to-end MLOps project that implements a Network Security Syst
 - Docker
 - Git
 
+## 📊 Project Dashboard
+
+### CI/CD Pipeline
+![CI/CD Pipeline](docs/images/ci-cd-pipeline.png)
+*Successful deployment pipeline with continuous integration, delivery, and deployment stages*
+
+### Model Performance Tracking
+![MLflow Dashboard](docs/images/mlflow-dashboard.png)
+*Model tracking in MLflow showing excellent performance metrics (F1: 0.968, Precision: 0.965, Recall: 0.972)*
+
+### GitHub Integration
+![DagsHub Repository](docs/images/dagshub-repo.png)
+*Project repository with MLOps experiment tracking*
+
+### Cloud Deployment
+![AWS ECR](docs/images/aws-ecr.png)
+*Docker images stored in Amazon Elastic Container Registry*
+
+![AWS S3](docs/images/aws-s3.png)
+*Artifact and model storage in Amazon S3*
+
 ## 📁 Project Structure
 
-```
+```bash
 networksecurity/
 ├── cloud/           # Cloud infrastructure and deployment configs
 ├── components/      # Core ML pipeline components
@@ -49,6 +70,8 @@ The project follows a modular architecture with clear separation of concerns:
 
 ## 🚀 Getting Started
 
+### Local Setup
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/NetworkSecuritySystem.git
@@ -71,6 +94,40 @@ cp .env.example .env
 uvicorn app:app --reload
 ```
 
+### AWS EC2 Deployment
+
+1. Connect to your EC2 instance using SSH
+
+2. Update the system packages:
+```bash
+sudo apt-get update -y
+sudo apt-get upgrade -y
+```
+
+3. Install Docker:
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
+
+4. Add your user to the Docker group:
+```bash
+sudo usermod -aG docker ubuntu
+newgrp docker
+```
+
+5. Clone and set up the project:
+```bash
+git clone https://github.com/yourusername/NetworkSecuritySystem.git
+cd NetworkSecuritySystem
+```
+
+6. Build and run with Docker:
+```bash
+docker build -t networksecurity .
+docker run -d -p 8000:8000 networksecurity
+```
+
 ## 📊 API Endpoints
 
 - `GET /`: Health check endpoint
@@ -79,7 +136,10 @@ uvicorn app:app --reload
 
 ## 📈 Model Performance
 
-[Add your model's performance metrics here]
+Our model achieves excellent performance metrics:
+- F1 Score: 0.968
+- Precision: 0.965
+- Recall: 0.972
 
 ## 🔒 Security Features
 
@@ -87,3 +147,9 @@ uvicorn app:app --reload
 - Anomaly detection
 - Threat classification
 - Real-time monitoring capabilities
+
+## 👤 Author
+
+Anusha Chebolu
+- Email: csl.anusha@gmail.com
+- LinkedIn: https://www.linkedin.com/in/chebolu-anusha/

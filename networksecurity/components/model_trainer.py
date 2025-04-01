@@ -24,7 +24,7 @@ import dotenv
 
 dotenv.load_dotenv()
 
-dagshub.init(repo_owner='anusha-chebolu', repo_name='Udemy-MLOps-Hands-on', mlflow=True)
+dagshub.init(repo_owner='anusha-chebolu', repo_name='E2E-MLOps-ETL-NetworkSecuritySystem', mlflow=True)
 
 MLFLOW_TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI")
 MLFLOW_TRACKING_USERNAME = os.getenv("MLFLOW_TRACKING_USERNAME")
